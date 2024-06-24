@@ -1,12 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+import time
 
-chrome_options = webdriver.ChromeOptions()
+chrome_options = Options()
 prefs = {"profile.default_content_setting_values.notifications": 2}
 chrome_options.add_experimental_option("prefs", prefs)
 
 # Specify the path to the ChromeDriver executable
-chrome_driver_path = "/path/to/chromedriver"  # Update this with your actual path
+chrome_driver_path = "/actual/path/to/chromedriver"  # Update this with your actual path
 
 driver_service = Service(chrome_driver_path)
 driver = webdriver.Chrome(service=driver_service, options=chrome_options)
