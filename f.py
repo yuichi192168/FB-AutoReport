@@ -8,7 +8,7 @@ prefs = {"profile.default_content_setting_values.notifications": 2}
 chrome_options.add_experimental_option("prefs", prefs)
 
 # Specify the path to the ChromeDriver executable
-chrome_driver_path = "/path/to/your/chromedriver"  # Update this with your actual path
+chrome_driver_path = "/usr/local/chromedriver"  # Update this with your actual path
 
 driver_service = Service(chrome_driver_path)
 driver = webdriver.Chrome(service=driver_service, options=chrome_options)
