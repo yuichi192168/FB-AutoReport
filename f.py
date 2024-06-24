@@ -1,12 +1,18 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import time
+from selenium.webdriver.chrome.service import Service
 
 chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.default_content_setting_values.notifications": 2}
 chrome_options.add_experimental_option("prefs", prefs)
 
-driver = webdriver.Chrome(options=chrome_options)
+# Specify the path to the ChromeDriver executable
+chrome_driver_path = "/path/to/chromedriver"  # Update this with your actual path
+
+driver_service = Service(chrome_driver_path)
+driver = webdriver.Chrome(service=driver_service, options=chrome_options)
+
+# Continue with your script...
+
 driver.get("https://www.facebook.com/")
 
 time.sleep(4)
