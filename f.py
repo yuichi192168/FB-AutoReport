@@ -9,7 +9,7 @@ prefs = {"profile.default_content_setting_values.notifications": 2}
 chrome_options.add_experimental_option("prefs", prefs)
 
 # Specify the correct path to the ChromeDriver executable
-chrome_driver_path = "/data/data/com.termux/files/home/FB-AutoReport/chromedriver.exe"  # Update this with your actual path
+chrome_driver_path = "/data/data/com.termux/files/home/FB-AutoReport"  # Make sure this is the correct path
 
 # Ensure that the ChromeDriver path is correct and the file exists
 driver_service = Service(chrome_driver_path)
